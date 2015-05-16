@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: decks_development
+  database: rangular_development
   template: template0
   pool: 5
   username: ubuntu
@@ -10,7 +10,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: decks_test
+  database: rangular_test
   template: template0
   pool: 5
   username: ubuntu
