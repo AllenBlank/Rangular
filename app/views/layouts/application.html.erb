@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Rangular">
 <head>
   <title>Rangular</title>
   
@@ -17,8 +17,8 @@
 
 </head>
 <body>
-
-<%= yield %>
-
+  <%= render 'layouts/header' %>
+  <div ng-view class="container">
+  </div>
 </body>
 </html>
