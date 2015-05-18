@@ -12,19 +12,18 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-
-    respond_to do |format|
-      if @item.save
-        render json: { success: true }
-      else
-        render json: { success: false, errors: @item.errors }
-      end
+    
+    if @item.save
+      render json: { success: true, item: @item }
+    else
+      render json: { success: false, errors: @item.errors }
     end
+    
   end
 
   def update
     if @item.update(item_params)
-      render json: { success: true }
+      render json: { success: true, item: @item }
     else
       render json: { success: false, errors: @item.errors }
     end

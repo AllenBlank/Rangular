@@ -1,10 +1,11 @@
 angular.module('Rangular')
-.directive 'item', (Item) ->
+.directive 'itemform', ->
   restrict: 'E'
-  templateUrl: '/app/items/_item.html'
+  templateUrl: '/app/items/_form.html'
   scope:
-    item: '='
+    item:  '='
+    submit: '='
+    title: '@'
   controller: ->
-    @editPath = Item.editPath
   link: (scope, element)->
     element.on 'click', ->
